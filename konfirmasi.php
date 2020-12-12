@@ -94,8 +94,11 @@
                             </div>
                             <div class="row">
                                 <div class="col d-flex justify-content-center" style="padding: 56px;">
-                                    <div class="btn-group" role="group" style="border-style: none;"><button class="btn btn-primary text-center justify-content-xl-center align-items-xl-end" type="button" style="background: #b9cad6;color: #000000;font-weight: bold;border-style: none;">Kembali</button><button class="btn btn-primary"
-                                            type="button" style="background: #dfe8ee;color: rgb(0,0,0);font-weight: bold;border-style: none;">Lanjutkan</button></div>
+                                    <div class="btn-group" role="group" style="border-style: none;"><button class="btn btn-primary text-center justify-content-xl-center align-items-xl-end" type="button" style="background: #b9cad6;color: #000000;font-weight: bold;border-style: none;">Kembali</button>
+                                    <button class="btn btn-primary" type="button" style="background: #dfe8ee;color: rgb(0,0,0);font-weight: bold;border-style: none;">
+                                        <a href="cetak.php"><font style="color: rgb(0,0,0)">Lanjutkan</font></a>
+                                    </button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row d-inline order-1" style="width: 1142px;padding: 0;margin: -31px;height: 158px;border-radius: 0;">

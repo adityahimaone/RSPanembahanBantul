@@ -18,7 +18,7 @@
 </head>
 
 <body style="background: url(&quot;assets/img/pat.webp&quot;);">
-    <header></header>
+    <header>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: linear-gradient(91deg, rgb(32,242,255) 0%, rgb(0,178,254) 100%), rgb(9,222,235);height: 61px;">
         <div class="container"><a class="navbar-brand" href="#" style="color: rgb(255,255,255);text-align: center;font-family: Allerta, sans-serif;border-style: none;text-shadow: 2px 0px 3px rgb(2,182,255);"><img class="img-fluid swing animated" src="assets/img/rs%20logo.png" style="width: 30px;margin: 0 10;filter: grayscale(0%);border-style: none;">RSUD Panembahan Senopati</a>
             <button
@@ -32,9 +32,11 @@
                 </div>
         </div>
     </nav>
-    <main></main>
+    </header>
+    <main>
     <div style="padding: 0;margin: 0 0 40px 0;">
         <div class="container">
+            
             <div class="row" style="background: #18e1ff;border-radius: 30px;margin: 40px 0 0 0;box-shadow: 19px 36px 8px 9px rgba(33,37,41,0.58);">
                 <div class="col-md-12">
                     <h4 class="text-center bounce animated" style="padding: 20px 0 0 0;">Booking Tiket</h4>
@@ -53,7 +55,7 @@
                                 <div class="col"><label style="font-size: 90px;">21</label>
                                     <div class="row">
                                         <div class="col">
-                                            <?php
+                                        <?php 
                                             include "phpqrcode/qrlib.php"; 
                                             $tempdir = "temp/";
                                             if (!file_exists($tempdir))
@@ -61,12 +63,14 @@
                                             //isi qrcode jika di scan
                                             $codeContents = '1234235234534'; 
                                             QRcode::png($codeContents, $tempdir.'007_4.png', QR_ECLEVEL_L, 7, 2);
+                                            
                                             echo '<img src="'.$tempdir.'007_4.png" />'; 
                                             //echo '<img src="'.$tempdir.'007_4.png style="width: 300px;background: #ffffff;border-radius: 40px;margin: 0 0 40px 0;/>'; 
-                                            ?>
+                                            
+                                        ?>
                                             <div  style="margin: 0px 0px 30px 0px;"></div>
                                             <div class="row">
-                                                <div class="col"><button class="btn btn-light" type="button" style="margin: 0px 0px 50px 0px;width: 88px;height: 39px;">Print</button>
+                                                <div class="col"><button class="btn btn-light" type="button" style="margin: 0px 0px 50px 0px;width: 88px;height: 39px;"><a href="process_output.php">Print</a></button>
                                                     <div class="row d-inline" style="border-radius: 0;">
                                                         <div class="col">
                                                             <div class="jumbotron" style="padding: 4px;border-radius: 30px;margin: -30px;">
@@ -93,8 +97,10 @@
                     </div>
                 </div>
             </div>
+        
         </div>
     </div>
+    </main>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
